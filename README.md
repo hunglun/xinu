@@ -15,7 +15,27 @@ Version: 2.01
     5. Load image over TFTP
  5. Links
 
+## For the impatient
+Run 
+> git checkout x86_qemu
+> cd compile && make 
+Expect
+> file xinu.elf 
+> compile/xinu.elf: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, with debug_info, not stripped
 
+Run
+> qemu-system-i386 -kernel xinu.elf
+Expect
+	
+	A window pops up showing the message "Booting from ROM..."
+
+Do
+> Ctrl-Alt-3
+Expect
+	
+	Welcome to the wonderful world of Xinu!
+	xsh$ 
+	
 ## 1. What is Embedded Xinu? ##
 
 Xinu ("Xinu is not unix", a recursive acronym) is a UNIX-like operating

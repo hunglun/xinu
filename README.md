@@ -17,19 +17,24 @@ Version: 2.01
 
 ## For the impatient
 Run 
-> sudo apt update && apt install -y bison flex qemu-system
-> git checkout x86_qemu
-> cd compile && make 
+```
+sudo apt update && apt install -y bison flex qemu-system
+git checkout x86_qemu
+cd compile && make 
+```
 Expect
-> file xinu.elf 
-> compile/xinu.elf: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, with debug_info, not stripped
-
+```
+file xinu.elf 
+compile/xinu.elf: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, with debug_info, not stripped
+```
 Run 
-> qemu-system-i386 -kernel xinu.elf -nographic
-
+```
+qemu-system-i386 -kernel xinu.elf -nographic
+```
 Alternatively, run
-> qemu-system-i386 -kernel xinu.elf
-
+```
+qemu-system-i386 -kernel xinu.elf
+```
 Expect
 	
 	A window pops up showing the message "Booting from ROM..."

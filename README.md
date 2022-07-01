@@ -16,15 +16,18 @@ Version: 2.01
  5. Links
 
 ## For the impatient
-Do 
-> git checkout x86_qemu && cd compile && make 
-
+Run 
+> sudo apt update && apt install -y bison flex qemu-system
+> git checkout x86_qemu
+> cd compile && make 
 Expect
+> file xinu.elf 
+> compile/xinu.elf: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, with debug_info, not stripped
 
-	file xinu.elf 
-	compile/xinu.elf: ELF 32-bit LSB executable, Intel 80386, version 1 (SYSV), statically linked, with debug_info, not stripped
+Run 
+> qemu-system-i386 -kernel xinu.elf -nographic
 
-Do
+Alternatively, run
 > qemu-system-i386 -kernel xinu.elf
 
 Expect
